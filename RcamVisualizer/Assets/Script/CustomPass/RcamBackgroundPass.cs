@@ -34,8 +34,7 @@ sealed class RcamBackgroundPass : CustomPass
     }
 
     protected override void Execute
-      (ScriptableRenderContext renderContext, CommandBuffer cmd,
-       HDCamera hdCamera, CullingResults cullingResult)
+      (CustomPassContext customPassContext)
     {
         if (_controller == null || !_controller.IsActive) return;
 
@@ -52,7 +51,7 @@ sealed class RcamBackgroundPass : CustomPass
         _material.SetTexture(ShaderID.DepthTexture, recv.DepthTexture);
 
         CoreUtils.DrawFullScreen
-          (cmd, _material, _controller.PropertyBlock, _controller.PassNumber);
+          (customPassContext.cmd, _material, _controller.PropertyBlock, _controller.PassNumber);
     }
 
     protected override void Cleanup()
