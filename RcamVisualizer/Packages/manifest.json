@@ -16,7 +16,8 @@
     }
   ],
   "dependencies": {
-    "com.unity.render-pipelines.high-definition": "8.2.0",
+    "com.unity.ide.rider": "3.0.12",
+    "com.unity.render-pipelines.high-definition": "12.1.4",
     "jp.keijiro.kino.feedback": "1.0.1",
     "jp.keijiro.kino.post-processing": "2.1.15",
     "jp.keijiro.klak.lineargradient": "1.0.2",
